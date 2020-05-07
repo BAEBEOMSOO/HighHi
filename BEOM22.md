@@ -17,11 +17,26 @@
 <img src = ""/>
 
 -------------------------------------------------------------------------------------
+<Sourcetree>
 < 소스트리가 안되면 명령으로 할 수 있다. history -> 터미널 
-git add *  / 터미널에서 입력하면 모든 것을 스테이지에 올리기
+git add *  : 터미널에서 입력하면 모든 것을 스테이지에 올리기
 
-git commit -m "test"  / 밑에 커밋메세지를 적을때 
+git commit -m "test"  : 밑에 커밋메세지를 적을때 
 
-git pull   / pull하겠다.
+git pull   :  pull하겠다.
 
-git push orgin master / master에 푸시하겠다.
+git push orgin master : master에 푸시하겠다.
+
+--------------------------------------------------------------------------------------
+<HTML>
+Block 태그 : 한줄을 차지
+Inline : 나란히 배치 
+<p> : 줄 바꿈. ( 아무리 적은 내용을 적어도 한 줄을 모듀 차지) 
+<a> : 하이퍼링크 
+<img sre> : 이미지
+<table > : 표 , <tr> :행, <td> : 각 행에서 열을 나누는 기능, <th> : 제목에 해당하는 열을 정의
+
+이미지를 넣을때 2가지 방법
+
+- 상대경로 : 나를 기준으로 찾아가는것 ex) < img src = " .\img\naver.jpg"/>
+- 절대경로 : 절대 변하지 않는 주소 ex) C:\Users\Student\Desktop\BeomHtml
