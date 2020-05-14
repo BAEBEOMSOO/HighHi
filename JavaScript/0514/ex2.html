@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- 세과목 (국, 영, 수) 세과목의 평균이 
+        95점 이상 A+
+        90점 이상 A-->
+
+    <script>
+        var k = Number(prompt("국어 점수를 입력하세요")) //Number = 문자형식을 숫자형식으로 바꿔준다.
+        var o = Number(prompt("영어 점수를 입력하세요"))
+        var s = Number(prompt("수학 점수를 입력하세요"))
+
+        var f = (k + o + s) / 3
+        
+
+        if (f >= 95){   // 모든 조건을 걸어주는 방법
+            alert("A+")
+        }else if(f >= 90){
+            alert("A")
+        }else if(f >= 85){
+            alert("B+")
+        }else if(f >= 80){
+            alert("B")
+        }else if(f >= 75){
+            alert("C+")
+        }else if(f >= 70){
+            alert("C")
+        }else if(f >= 65){
+            alert("D+")
+        }else if(f >= 60){
+            alert("D")
+        }else{
+            alert("F")
+        }
+
+        if(f >= 90){     // 큰 조건안에서 작은 조건 걸어주는 방법
+            if(f>=95){
+                alert("A+")
+            }else{
+                alert("A")
+            }
+        }else if(f >= 80){
+            if(f>=85){
+                alert("B+")
+            }else{
+                alert("B")
+            }
+        }else if(f >= 70){
+            if(f>=75){
+                alert("C+")
+            }else{
+                alert("c")
+            }
+        }else if(f >= 60){
+            if(f>=65){
+                alert("D+")
+            }else{
+                alert("D")
+            }
+        }else{
+            alert("F")
+        }
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
