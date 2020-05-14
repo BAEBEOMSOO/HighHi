@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ko = Number(prompt('국어 점수를 입력하세요')) // Number 따로 써주지 않고 앞에 써줘도 무방
+        var eng = prompt('영어 점수를 입력하세요')
+        var mat = prompt('수학 점수를 입력하세요')
+        eng = Number(eng)   //number x >Number로 해야 숫자로 변환함, 따로 써주는 경우
+        mat = Number(mat)
+
+        var avg = Number((ko+eng+mat) / 3)
+        var wo = '성적 : '
+
+        if(avg>=90){
+            if(avg>=95){    
+                alert(wo+'A+')
+            } else {
+                alert(wo+'A')
+            }
+        } else if(avg>=80){
+            if(avg>=85){
+                alert(wo+'B+')
+            } else {
+                alert(wo+'B')
+            }
+        } else if(avg>=70){
+            if(avg>=75){
+                alert(wo+'C+')
+            } else {
+                alert(wo+'C')
+            }
+        } else if(avg>=60){
+            if(avg>=65){
+                alert(wo+'D+')
+            } else {
+                alert(wo+'D')
+            }
+        } else {
+            alert(wo+'F')
+        }
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // alert(true?'1111':'2222')
+
+        var input = Number(prompt('숫자를 입력하세요.'))
+        alert(input)    // 일반 출력
+        alert(typeof(input))     // 입력받은 값의 타입을 알려줌
+
+        if(input>0){        // 조건문으로
+            alert('양수입니다.')
+        } else if(input==0){
+            alert('0입니다.')
+        } else {
+            alert('음수입니다.')
+        }
+
+        alert(input>0 ? '양수':'음수')    //삼항 연산자로
+
+        // 비교 같은 경우에는 문자숫자든 일반숫자든 상관없이 가능하다 
+        // 그래서 Number를 안써져도 가능하지만
+        // 사칙연산의 경우에는 불가능하므로 Number를 꼭 써줘야 실행이 가능
+        // 어쨌든 정확하게 하기 위해서는 숫자로 인식하도록 하기 위해서는 Number를 무조건 써주는 것이 좋다
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
