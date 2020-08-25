@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-size: 30px;" align='center'>
+   <input id="con" style="font-size: 60px;" />
+   <br />
+   <button id="1" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('1')">1</button>
+   <button id="2" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('2')">2</button>
+   <button id="3" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('3')">3</button>
+   <button id="+" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('+')">+</button><br />
+   <button id="4" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('4')">4</button>
+   <button id="5" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('5')">5</button>
+   <button id="6" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('6')">6</button>
+   <button id="-" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('-')">-</button><br />
+   <button id="7" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('7')">7</button>
+   <button id="8" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('8')">8</button>
+   <button id="9" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('9')">9</button>
+   <button id="/" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('/')">/</button><br />
+   <button id="0" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('0')">0</button>
+   <button id="*" style="width: 50px; height: 50px font-size : 30px;" onclick="clk('*')">*</button>
+   <button id="=" style="width: 50px; height: 50px font-size : 30px;" onclick="cal()">=</button>
+   <button id="c" style="width: 50px; height: 50px font-size : 30px;" onclick="document.getElementById('con').value=''">C</button><br />
+   <button id="<" style="width: 50px; height: 50px font-size : 30px;" onclick="back()"><</button>
+<script>
+function clk(x){ //x를 통해 전달받은 매개변수를 인풋공간에 넣어주는 함수
+    var btn=document.getElementById(x).textContent
+    var con = document.getElementById('con').value
+    con= con+btn
+    document.getElementById('con').value=con
+}
+
+//num1 calc num2 result
+//더하기 만나기 전까지 템프에 문자열로 저장 .
+//저장된 템프를 한번에 결과값에 변환하여 저장. 템프를 다시 비움(num1)
+//(num2)는 반복문 종료시 저장
+function cal(){
+            var con = document.getElementById('con').value
+            var result =0
+            var temp = ''
+            var calc
+            var num2 =0
+            for (let i = 0; i < con.length; i++) {
+                if(con[i] == '+'||con[i] == '-'||con[i] == '*'||con[i] == '/'){
+                    calc=con[i]
+                    result = result+parseInt(temp)
+                    temp=''
+                }else{
+                    temp = temp + con[i]
+                }
+            
+            }  
+                num2 =parseInt(temp)
+
+                if (calc == '+'){
+                    result = result+num2
+                }
+                 else if (calc == '-'){
+                  result = result-num2
+              }
+                 else if(calc == '*'){
+                  result = result*num2
+                  }
+                  else{
+                  result = result/num2
+                  }
+                document.getElementById('con').value = result
+                  }
+
+       
+ function back(){
+     var cc= document.getElementById('con').value
+     var x=cc.slice(0,-1)
+     document.getElementById('con').value=x
+ }
+
+
+//괄호(우선순위) 구현가능
+
+
+</script>
+
+</body>
+</html>
+
